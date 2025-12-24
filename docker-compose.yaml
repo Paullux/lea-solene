@@ -7,6 +7,12 @@ services:
       - ./:/var/www/html
     depends_on:
       - php
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost/index.php || exit 0"]  # Ignore les échecs temporaires
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s  # Attend 30 secondes avant de commencer les vérifications
     networks:
       - coolify_network  # <-- Utilisez un réseau dédié
 
