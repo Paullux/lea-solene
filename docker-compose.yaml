@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   nginx:
     build: ./nginx
@@ -5,8 +7,22 @@ services:
       - ./:/var/www/html
     depends_on:
       - php
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/index.php"]  # <-- Ajout de /index.php pour vérifier le fichier
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - coolify  # <-- Explicite le réseau (recommandé pour Coolify)
 
   php:
     image: php:8.2-fpm-alpine
     volumes:
       - ./:/var/www/html
+    networks:
+      - coolify  # <-- Même réseau que Nginx
+
+networks:
+  coolify:
+    external: true  # <-- Utilise le réseau existant de Coolify
+
