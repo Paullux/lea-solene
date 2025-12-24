@@ -1,20 +1,10 @@
-version: '3.8'
-
 services:
   nginx:
     build: ./nginx
     volumes:
       - ./:/var/www/html
-      - /etc/letsencrypt/live/lea-solene.fr/fullchain.pem:/etc/nginx/ssl/fullchain.pem:ro
-      - /etc/letsencrypt/live/lea-solene.fr/privkey.pem:/etc/nginx/ssl/privkey.pem:ro
     depends_on:
       - php
-    healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost/index.php || exit 0"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 30s
 
   php:
     image: php:8.2-fpm-alpine
