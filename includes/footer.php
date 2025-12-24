@@ -60,5 +60,15 @@
       </div>
     </div>
   </footer>
+  <div id="rgpd-banner" class="rgpd-hidden">
+    <p>
+      Ce site utilise des cookies pour mesurer l’audience et améliorer l’expérience.
+      Vous pouvez accepter ou refuser.
+    </p>
+    <div class="rgpd-actions">
+      <button id="rgpd-accept">Accepter</button>
+      <button id="rgpd-refuse">Refuser</button>
+    </div>
+  </div>
 </body>
 </html>

@@ -161,3 +161,49 @@ article:has(.lyrics.expanded) .toggle-lyrics {
   opacity: 1;
   transform: scale(1.1);
 }
+
+#rgpd-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  max-width: 520px;
+  background: #111;
+  color: #eee;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#rgpd-banner p {
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.rgpd-actions {
+  display: flex;
+  gap: 10px;
+}
+
+#rgpd-banner button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#rgpd-accept {
+  background: #4caf50;
+  color: #000;
+}
+
+#rgpd-refuse {
+  background: #333;
+  color: #fff;
+}
+
+.rgpd-hidden {
+  display: none;
+}
