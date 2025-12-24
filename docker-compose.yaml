@@ -1,9 +1,8 @@
 services:
   nginx:
-    image: nginx:alpine
+    build: ./nginx
     volumes:
       - ./:/var/www/html
-      - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - php
 
@@ -11,5 +10,3 @@ services:
     image: php:8.2-fpm-alpine
     volumes:
       - ./:/var/www/html
-
-
