@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
   <!-- Meta de base -->
-  <meta name="description" content="Léa Solène – Roots & Light. Une voix reggae douce et consciente, pour celles et ceux qui avancent lentement, avec leurs cicatrices et leur lumière.">
+  <meta name="description" content="Léa Solène est un projet musical indépendant entre reggae, douceur et lumière. Des chansons pour avancer lentement, avec ses cicatrices et sa paix intérieure.">
   <meta name="author" content="Léa Solène">
 
   <!-- OpenGraph / Facebook / Discord / LinkedIn -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Léa Solène – Roots & Light">
-  <meta property="og:description" content="Je chante pour apaiser. Pour celles et ceux qui avancent lentement, avec leurs cicatrices et leur lumière.">
+  <meta property="og:title" content="Léa Solène – Un projet musical entre roots, lumière et douceur">
+  <meta property="og:description" content="Un projet musical reggae indépendant, sensible et apaisé. Des chansons pour celles et ceux qui avancent lentement, avec leurs cicatrices et leur lumière.">
   <meta property="og:url" content="https://lea-solene.fr/">
   <meta property="og:image" content="https://lea-solene.fr/assets/img/og-lea-solene.jpg">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
 
   <!-- X / Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Léa Solène – Roots & Light">
-  <meta name="twitter:description" content="Une voix reggae douce, consciente et lumineuse.">
+  <meta name="twitter:title" content="Léa Solène – Roots, lumière et reggae conscient">
+  <meta name="twitter:description" content="Un projet musical indépendant mêlant reggae, douceur et poésie. À écouter, à regarder, à ressentir.">
   <meta name="twitter:image" content="https://lea-solene.fr/assets/img/og-lea-solene.jpg">
 
   <!-- Favicon -->
