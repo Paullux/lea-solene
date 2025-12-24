@@ -1,8 +1,6 @@
 services:
   nginx:
     image: nginx:alpine
-    ports:
-      - "80:80"
     volumes:
       - ./:/var/www/html
       - ./nginx/conf.d:/etc/nginx/conf.d
@@ -13,3 +11,4 @@ services:
     image: php:8.2-fpm-alpine
     volumes:
       - ./:/var/www/html
+
