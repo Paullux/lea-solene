@@ -164,21 +164,45 @@ article:has(.lyrics.expanded) .toggle-lyrics {
 
 #rgpd-banner {
   position: fixed;
-  bottom: 110px;
-  left: 20px;
+  bottom: 20px;
   right: 20px;
-  max-width: 520px;
-  background: rgba(10,10,10,0.95);
+  max-width: 420px;
+  background: rgba(10, 10, 10, 0.95);
   color: #fff;
   padding: 16px;
   border-radius: 12px;
-  font-size: 14px;
+  font-size: 0.9rem;
   z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .rgpd-actions {
   display: flex;
+  justify-content: flex-end;
   gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+#rgpd-accept {
+  background: #f0c040;
+  color: #000;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#rgpd-refuse {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #777;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.rgpd-hidden {
+  display: none;
 }
 
 .rgpd-actions button {
@@ -186,19 +210,4 @@ article:has(.lyrics.expanded) .toggle-lyrics {
   padding: 0.4rem 0.8rem;
   cursor: pointer;
   font-size: 0.85rem;
-}
-
-#rgpd-accept {
-  background: #f0c040;
-  color: #000;
-}
-
-#rgpd-refuse {
-  background: transparent;
-  color: #fff;
-  border: 1px solid #777;
-}
-
-.rgpd-hidden {
-  display: none !important;
 }
