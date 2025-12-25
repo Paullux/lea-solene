@@ -60,7 +60,7 @@
       </div>
     </div>
   </footer>
-  <div id="rgpd-banner" class="rgpd-banner rgpd-hidden">
+  <div id="rgpd-banner" class="rgpd-banner">
     <p>
       Ce site utilise des cookies de mesure d’audience (Matomo) afin
       d’améliorer l’expérience. Tu peux accepter ou refuser.
