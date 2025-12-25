@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("Load RGPD");
     const banner = document.getElementById('rgpd-banner');
     const acceptBtn = document.getElementById('rgpd-accept');
     const refuseBtn = document.getElementById('rgpd-refuse');

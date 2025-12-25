@@ -62,6 +62,7 @@
   <!-- JS -->
   <script src="../js/lyrics.js"></script>
   <script src="../js/player.js"></script>
+  <script src="../js/rgpd.js"></script>
 </head>
 
 <body class="bg-lea-bg text-lea-text font-serif">
