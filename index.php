@@ -16,7 +16,8 @@
   <!-- Contenu -->
   <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start font-serif">
     <!-- Intro -->
-    <div class="bg-lea-panel p-6 max-w-md">
+    <div class="bg-lea-panel bg-[#8a7f2f] rounded-lg shadow-xl border border-[#D1CFC0] p-8 max-w-md relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#556B2F] via-[#D4AF37] to-[#8B4513] opacity-60"></div>
       <p class="font-elite leading-relaxed">
         Moi, Léa Solène.<br>
         Je chante pour apaiser.<br>
@@ -74,7 +75,8 @@
   <!-- Contenu -->
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start font-serif">
     <?php foreach ($lyrics as $track): ?>
-      <article class="bg-lea-panel p-6 relative">
+      <article class="bg-lea-panel bg-[#8a7f2f] rounded-lg shadow-xl border border-[#D1CFC0] p-8 relative overflow-hidden flex flex-col h-full">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#556B2F] via-[#D4AF37] to-[#8B4513] opacity-60"></div>
         <h3 class="font-elite font-semibold mb-2">
           <?= htmlspecialchars($track['title']) ?>
         </h3>
@@ -102,5 +104,5 @@
     <?php endforeach; ?>
   </div>
 </section>
-
+<?php include 'includes/newsletter.php'; ?>
 <?php include 'includes/footer.php'; ?>
