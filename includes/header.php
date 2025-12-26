@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta charset="utf-8">
   <title>Léa Solène - Roots & Light</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
