@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://lea-solene.fr/assets/img/og-lea-solene.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="icon" href="/assets/img/favicon.png">
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
