@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.disabled = true;
 
             // Envoi des données au script PHP via AJAX (Fetch)
-            fetch('subscribe.php', {
+            fetch('/subscribe.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: 'email=' + encodeURIComponent(email)
