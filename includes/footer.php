@@ -8,7 +8,7 @@
           &copy; <?= date('Y') ?> Léa Solène. Tous droits réservés.
       </p>
       
-      <a href="legal.php" class="font-serif text-xs text-[#1E2D08]/40 hover:text-[#1E2D08] underline mt-2 transition-colors">
+      <a href="legal" class="font-serif text-xs text-[#1E2D08]/40 hover:text-[#1E2D08] underline mt-2 transition-colors">
           Mentions légales & Confidentialité
       </a>
 
