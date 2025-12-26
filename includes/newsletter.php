@@ -39,5 +39,9 @@
         </form>
 
         <div id="newsletter-message" class="font-serif text-sm mt-4 hidden"></div>
+        <p class="text-xs text-[#1E2D08]/60 mt-3 font-serif italic">
+            En t'inscrivant, tu acceptes de recevoir mes actualités par email.<br>
+            Pas de spam, promis. Désinscription possible à tout moment.
+        </p>
     </div>
 </section>
