@@ -5,14 +5,15 @@
   <title>Léa Solène - Roots & Light</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
+
   <!-- Meta de base -->
-  <meta name="description" content="Léa Solène est un projet musical indépendant entre reggae, douceur et lumière. Des chansons pour avancer lentement, avec ses cicatrices et sa paix intérieure.">
+  <meta name="description" content="Découvrez l'univers Roots Light de Léa Solène. Un projet musical indépendant entre reggae, douceur et lumière pour apaiser l'esprit.">
   <meta name="author" content="Léa Solène">
 
   <!-- OpenGraph / Facebook / Discord / LinkedIn -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Léa Solène – Un projet musical entre roots, lumière et douceur">
-  <meta property="og:description" content="Un projet musical reggae indépendant, sensible et apaisé. Des chansons pour celles et ceux qui avancent lentement, avec leurs cicatrices et leur lumière.">
+  <meta property="og:title" content="Léa Solène – Roots Light & Musique Solaire">
+  <meta property="og:description" content="Un projet musical reggae indépendant et sensible. Des chansons pour celles et ceux qui avancent lentement, avec leurs cicatrices et leur lumière.">
   <meta property="og:url" content="https://lea-solene.fr/">
   <meta property="og:image" content="https://lea-solene.fr/assets/img/og-lea-solene.jpg">
   <meta property="og:image:width" content="1200">
@@ -21,7 +22,7 @@
 
   <!-- X / Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Léa Solène – Roots, lumière et reggae conscient">
+  <meta name="twitter:title" content="Léa Solène – Roots Light & Reggae Conscient">
   <meta name="twitter:description" content="Un projet musical indépendant mêlant reggae, douceur et poésie. À écouter, à regarder, à ressentir.">
   <meta name="twitter:image" content="https://lea-solene.fr/assets/img/og-lea-solene.jpg">
 
@@ -34,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
   <!-- CSS perso -->
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -60,10 +61,10 @@
   </script>
 
   <!-- JS -->
-  <script src="../js/lyrics.js"></script>
-  <script src="../js/player.js"></script>
-  <script src="../js/rgpd.js"></script>
-  <script src="../js/newsletter.js"></script>
+  <script src="/js/lyrics.js"></script>
+  <script src="/js/player.js"></script>
+  <script src="/js/rgpd.js"></script>
+  <script src="/js/newsletter.js"></script>
 </head>
 
 <body class="bg-lea-bg text-lea-text font-serif">
