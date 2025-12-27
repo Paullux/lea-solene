@@ -31,6 +31,7 @@ if ($email && filter_var($email, FILTER_VALIDATE_EMAIL)) {
     
     $response_body = curl_exec($ch_del);
     $http_code = curl_getinfo($ch_del, CURLINFO_HTTP_CODE);
+    curl_close($ch_del);
 
     // --- ÉTAPE 2 : ANALYSE DU RÉSULTAT ---
     
