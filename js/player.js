@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: 'Sous La Lumière Douce', src: 'assets/audio/lea_solene_sous_la_lumiere_douce.mp3' },
         { title: "L'Écho de l'Espoir", src: 'assets/audio/lea_solene_l_echo_de_l_espoir.mp3' },
         { title: 'Ce Qui Reste', src: 'assets/audio/lea_solene_ce_qui_reste.wav' },
-        { title: 'Je vais bien', src: 'assets/audio/lea_solene_je_vais_bien.mp3' }
+        { title: 'Je vais bien', src: 'assets/audio/lea_solene_je_vais_bien.mp3' },
+        { title: 'Sous l’oeil de Jah', src: 'assets/audio/lea_solene_sous_l_oeil_de_jah.mp3' },
+        { title: 'L\'Appel de Zion', src: 'assets/audio/lea_solene_appel_de_zion.mp3' }
     ];
 
     let currentIndex = 0;

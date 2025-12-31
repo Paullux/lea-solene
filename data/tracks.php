@@ -24,5 +24,18 @@ $tracks = [
     'audio' => 'assets/audio/lea_solene_je_vais_bien.mp3',
     'youtube' => 'https://youtu.be/f7aGfO4Lhew',
     'tiktok' => 'https://www.tiktok.com/@paulluxwaffle/video/7586913536425708822'
+  ],
+  [
+    'title' => "Sous l’oeil de Jah",
+    'audio' => 'assets/audio/lea_solene_sous_l_oeil_de_jah.mp3',
+    'youtube' => 'https://youtu.be/ehLplCrAIkY',
+    'tiktok' => 'https://www.tiktok.com/@paulluxwaffle/video/7587876950832614678'
+  ],
+  [
+    'title' => "L'Appel de Zion",
+    'audio' => 'assets/audio/lea_solene_appel_de_zion.mp3',
+    'youtube' => 'https://youtu.be/qG7I4z0-cOo',
+    'tiktok' => 'https://www.tiktok.com/@paulluxwaffle/video/7590115511518711062'
   ]
 ];
+?>

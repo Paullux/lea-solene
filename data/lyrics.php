@@ -279,4 +279,132 @@ Je vais bien…
 Love and Jah.
 TEXT
   ],
+  [
+    'title' => "Sous l’oeil de Jah",
+    'audio' => 'assets/audio/lea_solene_sous_l_oeil_de_jah.mp3',
+    'youtube' => 'https://youtu.be/ehLplCrAIkY',
+    'tiktok' => 'https://www.tiktok.com/@paulluxwaffle/video/7587876950832614678',
+    'lyrics' => <<<TEXT
+[Couplet 1]
+Babylone parle fort, promet des lendemains,
+Des écrans, des lois sèches, des cœurs à l’étroit.
+Mais quand ta main trouve la mienne au matin,
+Le monde ralentit, ne nous atteint pas.
+
+[Pré-refrain]
+Ils veulent nous diviser, nous apprendre la peur,
+Mais ton souffle contre moi me rappelle l’essentiel.
+
+[Refrain]
+Sous l’œil de Jah, je t’aime simplement,
+Un homme, une femme, debout dans le vent.
+Ce n’est pas une fuite, c’est une réponse claire,
+L’amour vivant face aux murs de Babylone.
+
+[Couplet 2]
+Ils vendent des chaînes dorées, des rôles, des images,
+Des mots trop lourds pour nos corps fatigués.
+Mais dans ton regard je retrouve le passage,
+Celui qui mène à la vérité.
+
+[Pré-refrain]
+Pas besoin de couronne, ni de faux pouvoirs,
+Quand deux cœurs marchent droits dans la lumière.
+
+[Refrain]
+Sous l’œil de Jah, je t’aime simplement,
+Un homme, une femme, présents, conscients.
+Ce n’est pas une guerre, c’est un choix sincère,
+L’amour debout face à Babylone.
+
+[Pont]
+Jah ne crie pas, il guide en silence,
+Dans la chaleur d’un lien respecté.
+Chaque pas ensemble est une résistance,
+Chaque baiser, un acte sacré.
+
+[Refrain final]
+Sous l’œil de Jah, je t’aime lentement,
+Contre l’aliénation, contre l’oubli des sens.
+Si Babylone tombe, ce sera par là,
+Par l’amour vrai… toi et moi.
+
+[Outro]
+Babylone s’agite,
+Nous, on reste.
+TEXT
+  ],
+  [
+    'title' => "L'Appel de Zion",
+    'audio' => 'assets/audio/lea_solene_appel_de_zion.mp3',
+    'youtube' => 'https://youtu.be/qG7I4z0-cOo',
+    'tiktok' => 'https://www.tiktok.com/@paulluxwaffle/video/7590115511518711062',
+    'lyrics' => <<<TEXT
+[Couplet 1]
+J’ai quitté les lumières qui mentent comme des promesses,
+Pour des chemins de terre où mes pas font pousser des tresses.
+Chaque grain que je sème est un mot que j’ai tu,
+Chaque fruit qui mûrit est une preuve que Jah a entendu.
+Mes doigts connaissent l’argile, la pluie, le poids du soleil,
+Et le soir, quand la brume danse avec les abeilles,
+Je goûte dans la tomate le sel de nos anciens,
+Ceux qui savaient déjà que la terre est un jardin.
+
+[Pré-refrain]
+Ohhh, et si le paradis n’était qu’un champ à défricher,
+Un feu qui crépite, des mains à serrer ?
+Pas besoin de couronne quand on a des racines,
+Car Zion, c’est ici… quand on y croit.
+
+[Refrain]
+Lève-toi, viens, la route est un sillon,
+Où chaque pas efface un peu de Babylon.
+Plante tes rêves profond, arrose-les de chants,
+Et tu verras pousser… ton propre Shashamane.
+Lève-toi, viens, la table est mise,
+Avec le pain qu’on pétrit, les histoires qu’on partages.
+Ici, même les ombres ont le goût du miel,
+Car Zion, c’est ce qu’on cultive… et ce qu’on veille.
+
+[Couplet 2]
+Mon grand-père disait : « Un homme affamé
+N’est libre que s’il connaît le nom de ses semis. »
+Alors j’ai appris les saisons, les signes du vent,
+À reconnaître l’aube rien qu’au chant des enfants.
+Pas de roi, pas de loi, juste des lignes de haricots,
+Des courges qui grimpent comme des prières en silence,
+Et ce feu qui crépite, droit comme un I,
+C’est la seule lumière dont j’aie besoin pour vivre.
+
+[Pré-refrain]
+Ohhh, et si le paradis n’était qu’un repas partagé,
+Un rire qui roule, un pain qu’on a pétrit ?
+Pas besoin de frontières quand on a des graines,
+Car Zion, c’est ici… quand on s’y reconnaît.
+
+[Refrain]
+Lève-toi, viens, la route est un sillon,
+Où chaque pas efface un peu de Babylon.
+Plante tes rêves profond, arrose-les de chants,
+Et tu verras pousser… ton propre Shashamane.
+Lève-toi, viens, la table est mise,
+Avec le pain qu’on pétrit, les histoires qu’on partages.
+Ici, même les ombres ont le goût du miel,
+Car Zion, c’est ce qu’on cultive… et ce qu’on veille.
+
+[Pont]
+Ils nous ont vendu des rêves en boîte, des dieux en plastique,
+Mais moi, je crois aux miracles qui poussent… dans le compost.
+Parce qu’un jour, tes enfants te demanderont :
+« Dis, c’est quoi, le goût de la terre ? »
+Et tu leur tendras une figue encore tiède de soleil,
+En leur disant : « Ça, c’est Zion. »
+
+[Outro]
+Lève-toi… (lève-toi)
+Viens… (viens)
+La table est mise.
+Ital… c’est la vie.
+TEXT
+  ],
 ];
