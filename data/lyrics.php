@@ -38,7 +38,7 @@ Chaque nouveau matin rallume ma voie.
 [Pont]
 Que le rythme vienne laver mes douleurs,
 Je ne suis pas brisée, je deviens meilleure.
-Je ne fuis plus, je traCouplet la pluie,
+Je ne fuis plus, je traverse la pluie,
 Et l’amour emporte les peines de ma vie.
 
 [Outro]
@@ -72,7 +72,7 @@ Et semer l’amour comme un fleuve.
 [Refrain]
 Ohhh, écoute l’écho de l’espoir,
 Il résonne en toi, en moi,
-Un chant qui traCouplet les frontières,
+Un chant qui traverse les frontières,
 Pour un monde où l’on s’aime enfin.
 Ohhh, laisse-toi porter par la mélodie,
 Elle porte nos espoirs infinis,
@@ -98,7 +98,7 @@ Et semer l’amour comme un fleuve.
 [Refrain]
 Ohhh, écoute l’écho de l’espoir,
 Il résonne en toi, en moi,
-Un chant qui traCouplet les frontières,
+Un chant qui traverse les frontières,
 Pour un monde où l’on s’aime enfin.
 Ohhh, laisse-toi porter par la mélodie,
 Elle porte nos espoirs infinis,
@@ -114,7 +114,7 @@ Qu’on peut renaître de nos chagrins...
 [Refrain final]
 Ohhh, écoute l’écho de l’espoir,
 Il résonne en toi, en moi,
-Un chant qui traCouplet les frontières,
+Un chant qui traverse les frontières,
 Pour un monde où l’on s’aime enfin.
 Ohhh, laisse-toi porter par la mélodie,
 Elle porte nos espoirs infinis,
