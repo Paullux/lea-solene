@@ -1,97 +1,128 @@
 <?php
-// unsubscribe.php - VERSION FINALE PROPRE
+declare(strict_types=1);
 
-// Gestion Hybride (Local / Coolify)
+// unsubscribe.php - version durcie
+
 if (file_exists(__DIR__ . '/secrets.php')) {
     require_once __DIR__ . '/secrets.php';
 }
 
-$email = filter_input(INPUT_GET, 'email', FILTER_SANITIZE_EMAIL);
-$api_key = getenv('RESEND_API_KEY');
-$audience_id = getenv('RESEND_AUDIENCE_ID');
+$apiKey = getenv('RESEND_API_KEY');
+$audienceId = getenv('RESEND_AUDIENCE_ID');
+$unsubscribeSecret = getenv('UNSUBSCRIBE_SECRET');
 
-$titre_ecran = "";
-$message_ecran = "";
+$titre_ecran = 'Lien invalide';
+$message_ecran = "Ce lien ne semble pas fonctionner.";
 
-// Sécurité basique
-if (!$api_key || !$audience_id) {
-    die("Erreur de configuration technique.");
+if (!$apiKey || !$audienceId || !$unsubscribeSecret) {
+    http_response_code(500);
+    die('Erreur de configuration technique.');
 }
 
-if ($email && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+$emailRaw = (string)($_GET['email'] ?? '');
+$token = (string)($_GET['token'] ?? '');
 
-    // --- 1. On tente de supprimer le contact de l'audience ---
-    $ch_del = curl_init();
-    curl_setopt($ch_del, CURLOPT_URL, "https://api.resend.com/audiences/$audience_id/contacts/$email");
-    curl_setopt($ch_del, CURLOPT_CUSTOMREQUEST, "DELETE");
-    curl_setopt($ch_del, CURLOPT_HTTPHEADER, [
-        'Authorization: Bearer ' . $api_key
-    ]);
-    curl_setopt($ch_del, CURLOPT_RETURNTRANSFER, true);
-    
-    $response = curl_exec($ch_del);
-    $http_code = curl_getinfo($ch_del, CURLINFO_HTTP_CODE);
-    curl_close($ch_del);
+$email = filter_var($emailRaw, FILTER_VALIDATE_EMAIL);
 
-    // --- 2. On analyse le résultat ---
-    if ($http_code == 200) {
-        // SUCCÈS : Le contact existait et vient d'être supprimé
-        $titre_ecran = "C'est noté...";
-        $message_ecran = "Tu as bien été retiré(e) de ma liste. Un dernier mail de confirmation vient de partir.";
+function h(string $value): string
+{
+    return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+}
 
-        // On envoie le mail d'adieu uniquement maintenant
-        $ch_mail = curl_init('https://api.resend.com/emails');
-        $data_mail = [
-            'from' => 'Léa Solène <lea@lea-solene.fr>',
-            'to' => $email,
-            'subject' => 'Au revoir... 🍂',
-            'html' => '<div style="font-family: Georgia, serif; color: #1E2D08; padding: 20px;">
-                        <p>Bonjour,</p>
-                        <p>Je te confirme que tu as été retiré(e) de ma liste de diffusion.</p>
-                        <p>Ta lumière manquera à ce petit cercle, mais la porte reste toujours entrouverte.</p>
-                        <p><em>Léa Solène</em></p></div>'
-        ];
-        curl_setopt($ch_mail, CURLOPT_POST, 1);
-        curl_setopt($ch_mail, CURLOPT_POSTFIELDS, json_encode($data_mail));
-        curl_setopt($ch_mail, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $api_key, 'Content-Type: application/json']);
-        curl_setopt($ch_mail, CURLOPT_RETURNTRANSFER, true);
-        curl_exec($ch_mail);
-        curl_close($ch_mail);
+if ($email && $token !== '') {
+    $normalizedEmail = strtolower(trim($email));
+    $expectedToken = hash_hmac('sha256', $normalizedEmail, $unsubscribeSecret);
 
-    } elseif ($http_code == 404) {
-        // DÉJÀ FAIT : Le contact n'était plus dans la liste
-        $titre_ecran = "Déjà fait";
-        $message_ecran = "Ton adresse ne figurait plus dans la liste de diffusion. Aucune action n'est nécessaire.";
-    
-    } else {
-        // ERREUR
-        $titre_ecran = "Oups...";
-        $message_ecran = "Une erreur technique est survenue. Merci de réessayer plus tard.";
+    if (hash_equals($expectedToken, $token)) {
+        $encodedEmail = rawurlencode($normalizedEmail);
+
+        $chDel = curl_init();
+        curl_setopt_array($chDel, [
+            CURLOPT_URL => "https://api.resend.com/audiences/{$audienceId}/contacts/{$encodedEmail}",
+            CURLOPT_CUSTOMREQUEST => 'DELETE',
+            CURLOPT_HTTPHEADER => [
+                'Authorization: Bearer ' . $apiKey,
+                'Accept: application/json'
+            ],
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT => 15,
+        ]);
+
+        $response = curl_exec($chDel);
+        $httpCode = (int)curl_getinfo($chDel, CURLINFO_HTTP_CODE);
+        $curlError = curl_error($chDel);
+        curl_close($chDel);
+
+        if ($httpCode === 200) {
+            $titre_ecran = "C'est noté...";
+            $message_ecran = "Tu as bien été retiré(e) de la liste de diffusion.";
+
+            // Facultatif : je te conseille de NE PAS envoyer de mail d'adieu.
+            // Si tu tiens à le faire, garde-le très sobre.
+
+        } elseif ($httpCode === 404) {
+            // Réponse neutre pour éviter d'exposer trop d'infos
+            $titre_ecran = "C'est noté...";
+            $message_ecran = "Si cette adresse était encore inscrite, elle a bien été retirée.";
+
+        } else {
+            error_log('unsubscribe error | HTTP: ' . $httpCode . ' | cURL: ' . $curlError . ' | Response: ' . $response);
+            $titre_ecran = 'Oups...';
+            $message_ecran = "Une erreur technique est survenue. Merci de réessayer plus tard.";
+        }
     }
-
-} else {
-    $titre_ecran = "Lien invalide";
-    $message_ecran = "Ce lien ne semble pas fonctionner.";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Désinscription - Léa Solène</title>
     <style>
-        body { font-family: 'Georgia', serif; background-color: #f9f9f7; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; color: #1E2D08; }
-        .card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; max-width: 400px; border: 1px solid #e0e0d0; }
-        h1 { font-style: italic; color: #4a5d23; margin-bottom: 20px; }
-        .btn { display: inline-block; margin-top: 20px; text-decoration: none; color: #8a8a7a; border-bottom: 1px solid #8a8a7a; }
+        body {
+            font-family: Georgia, serif;
+            background-color: #f9f9f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #1E2D08;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 420px;
+            border: 1px solid #e0e0d0;
+        }
+        h1 {
+            font-style: italic;
+            color: #4a5d23;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.5;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #8a8a7a;
+            border-bottom: 1px solid #8a8a7a;
+        }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1><?php echo $titre_ecran; ?></h1>
-        <p><?php echo $message_ecran; ?></p>
+        <h1><?= h($titre_ecran) ?></h1>
+        <p><?= h($message_ecran) ?></p>
         <a href="/" class="btn">Retour à l'accueil</a>
     </div>
 </body>
